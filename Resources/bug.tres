@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="DataMonster" load_steps=2 format=3 uid="uid://j5u02eb8rfjv"]
+
+[ext_resource type="Script" path="res://Resources/data_monster.gd" id="1_tskp0"]
+
+[resource]
+script = ExtResource("1_tskp0")
+movement_speed = 50
+health = 100
+damage = 65
+attack_cooldown = 1.0

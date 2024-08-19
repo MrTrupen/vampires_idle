@@ -1,3 +1,24 @@
-[gd_scene format=3 uid="uid://b87l5p0j3hb8i"]
+[gd_scene load_steps=5 format=3 uid="uid://b87l5p0j3hb8i"]
+
+[ext_resource type="Texture2D" uid="uid://d0qxjr8488fg2" path="res://Art/background.png" id="1_cgas4"]
+[ext_resource type="PackedScene" uid="uid://c4wki1k4wifjp" path="res://Scenes/monster.tscn" id="2_y8684"]
+[ext_resource type="Resource" uid="uid://j5u02eb8rfjv" path="res://Resources/bug.tres" id="3_jf1yb"]
+[ext_resource type="PackedScene" uid="uid://cuwn4otagtavs" path="res://Scenes/hero.tscn" id="3_xmc1g"]
 
 [node name="MainScene" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(2, 0)
+texture = ExtResource("1_cgas4")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(3.65, 3.65)
+
+[node name="Monster" parent="." instance=ExtResource("2_y8684")]
+position = Vector2(99, -48)
+data = ExtResource("3_jf1yb")
+
+[node name="Hero" parent="." instance=ExtResource("3_xmc1g")]
+unique_name_in_owner = true
+position = Vector2(2, -2)
+monitoring = false

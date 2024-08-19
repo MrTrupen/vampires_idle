@@ -19,6 +19,10 @@ config/icon="res://Art/icon.svg"
 
 MainManager="*res://Scripts/main_manager.gd"
 
+[display]
+
+window/stretch/mode="canvas_items"
+
 [file_customization]
 
 folder_colors={
@@ -26,6 +30,11 @@ folder_colors={
 "res://Resources/": "orange",
 "res://Scenes/": "green"
 }
+
+[layer_names]
+
+2d_physics/layer_1="Monster"
+2d_physics/layer_2="Hero"
 
 [rendering]
 
