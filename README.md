@@ -2,7 +2,7 @@
 
 ## Description
 
-**Vampires Idle** is an idle game developed in Godot where players manage a vampire kingdom. Upgrade spawners, level up heroes, and harvest their souls to enhance your vampire's power and conquer the night.
+**Vampires Idle** is an idle game developed in Godot where players manage a vampire kingdom. Upgrade spawners, level up heroes, and harvest their souls to enhance your vampires power and conquer the world.
 
 ## Features
 
@@ -20,4 +20,4 @@
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/vampires_idle.git
+git clone https://github.com/MrTrupen/vampires_idle
