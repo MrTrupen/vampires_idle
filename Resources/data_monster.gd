@@ -8,3 +8,5 @@ extends Resource
 @export var damage: int = 1
 ## Attack cooldown in seconds
 @export var attack_cooldown: float = 1
+## Spawner cooldown in seconds
+@export var respawn_cooldown: float = 1

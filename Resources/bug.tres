@@ -5,8 +5,9 @@
 
 [resource]
 script = ExtResource("1_tskp0")
+sprite = ExtResource("1_0u472")
 movement_speed = 50
 health = 100
 damage = 65
 attack_cooldown = 1.0
-sprite = ExtResource("1_0u472")
+respawn_cooldown = 5.0

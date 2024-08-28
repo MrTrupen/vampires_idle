@@ -1,23 +1,35 @@
 extends Area2D
 
-@export var data: DataMonster
+#init as a backup monster called "bug" in case
+@export var data: DataMonster = preload("res://Resources/bug.tres")
 
 var is_moving: bool = true
 var is_attacking: bool = false
 
 var attack_timer: float = 0
 
-@onready var hero: Area2D = %Hero
+@onready var hero: Area2D = MainManager.hero
 
 
 func _ready():
-	data = data.duplicate()
+	if data:
+		data = data.duplicate()
+		get_node("Sprite").texture = data.sprite
+	else:
+		print("Monster data not set")
+		queue_free()
+
+
+func load_data(input_data: DataMonster):
+	self.data = input_data.duplicate()
 	get_node("Sprite").texture = data.sprite
 
 
 func _process(delta):
 	if is_moving:
-		position = position.move_toward(Vector2(hero.position), delta * data.movement_speed)
+		global_position = global_position.move_toward(
+			Vector2(hero.global_position), delta * data.movement_speed
+		)
 
 
 func _physics_process(_delta):
