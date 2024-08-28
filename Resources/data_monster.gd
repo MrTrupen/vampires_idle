@@ -1,7 +1,7 @@
 class_name DataMonster
 extends Resource
 
-@export var monster_sprite: Texture2D
+@export var sprite: Texture2D
 
 @export var movement_speed: int = 1
 @export var health: int = 1

@@ -12,6 +12,7 @@ var attack_timer: float = 0
 
 func _ready():
 	data = data.duplicate()
+	get_node("Sprite").texture = data.sprite
 
 
 func _process(delta):

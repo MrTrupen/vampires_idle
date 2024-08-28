@@ -1,6 +1,5 @@
-[gd_scene load_steps=4 format=3 uid="uid://c4wki1k4wifjp"]
+[gd_scene load_steps=3 format=3 uid="uid://c4wki1k4wifjp"]
 
-[ext_resource type="Texture2D" uid="uid://fyixeaor78mn" path="res://Art/bug.png" id="1_e8jfv"]
 [ext_resource type="Script" path="res://Scripts/monster.gd" id="1_wdfmk"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mno11"]
@@ -11,7 +10,6 @@ collision_layer = 2
 script = ExtResource("1_wdfmk")
 
 [node name="Sprite" type="Sprite2D" parent="."]
-texture = ExtResource("1_e8jfv")
 
 [node name="Hitbox" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_mno11")
