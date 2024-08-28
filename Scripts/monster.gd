@@ -2,12 +2,12 @@ extends Area2D
 
 @export var data: DataMonster
 
-var moving: bool = true
-var attacking: bool = false
+var is_moving: bool = true
+var is_attacking: bool = false
 
 var attack_timer: float = 0
 
-@onready var target: Area2D = %Hero
+@onready var hero: Area2D = %Hero
 
 
 func _ready():
@@ -16,14 +16,14 @@ func _ready():
 
 
 func _process(delta):
-	if moving:
-		position = position.move_toward(Vector2(target.position), delta * data.movement_speed)
+	if is_moving:
+		position = position.move_toward(Vector2(hero.position), delta * data.movement_speed)
 
 
 func _physics_process(_delta):
-	if attacking and attack_timer <= 0:
+	if is_attacking and attack_timer <= 0:
 		attack_timer = data.attack_cooldown * 60
-		target.get_hit(data.damage)
+		hero.get_hit(data.damage)
 		print("Monster hit hero", data.damage)
 	else:
 		attack_timer -= 1
@@ -31,7 +31,7 @@ func _physics_process(_delta):
 
 func _on_area_entered(_area: Area2D):
 	attack_timer = data.attack_cooldown * 60
-	attacking = true
-	moving = false
-	target.get_hit(data.damage)
+	is_attacking = true
+	is_moving = false
+	hero.get_hit(data.damage)
 	print("Monster hit hero", data.damage)
