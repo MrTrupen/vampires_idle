@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="DataMonster" load_steps=2 format=3 uid="uid://8fp4s8slmpoc"]
+
+[ext_resource type="Script" path="res://Resources/data_monster.gd" id="1_opwf8"]
+
+[resource]
+script = ExtResource("1_opwf8")
+movement_speed = 1
+health = 1
+damage = 1
+attack_cooldown = 1.0

@@ -21,4 +21,3 @@ data = ExtResource("3_jf1yb")
 [node name="Hero" parent="." instance=ExtResource("3_xmc1g")]
 unique_name_in_owner = true
 position = Vector2(2, -2)
-monitoring = false

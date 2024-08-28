@@ -1,4 +1,4 @@
-extends Area2D
+extends Node2D
 
 var max_health: int = 1000
 var health: int = 999999

@@ -1,19 +1,28 @@
-[gd_scene load_steps=4 format=3 uid="uid://c4wki1k4wifjp"]
+[gd_scene load_steps=7 format=3 uid="uid://c4wki1k4wifjp"]
 
 [ext_resource type="Texture2D" uid="uid://fyixeaor78mn" path="res://Art/bug.png" id="1_e8jfv"]
 [ext_resource type="Script" path="res://Scripts/monster.gd" id="1_wdfmk"]
+[ext_resource type="PackedScene" uid="uid://crng8dd6iod43" path="res://Scenes/Components/hitbox_component.tscn" id="4_pi4dq"]
+[ext_resource type="PackedScene" uid="uid://dubms7mo4tc1b" path="res://Scenes/Components/attack_component.tscn" id="5_dqd6m"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_mno11"]
-radius = 9.0
+[sub_resource type="CircleShape2D" id="CircleShape2D_fjgur"]
 
-[node name="Monster" type="Area2D"]
-collision_layer = 2
+[sub_resource type="CircleShape2D" id="CircleShape2D_xb4s2"]
+radius = 16.0312
+
+[node name="Monster" type="Node2D"]
 script = ExtResource("1_wdfmk")
 
 [node name="Sprite" type="Sprite2D" parent="."]
 texture = ExtResource("1_e8jfv")
 
-[node name="Hitbox" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_mno11")
+[node name="HitboxComponent" parent="." instance=ExtResource("4_pi4dq")]
+collision_layer = 2
 
-[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxComponent"]
+shape = SubResource("CircleShape2D_fjgur")
+
+[node name="AttackComponent" parent="." instance=ExtResource("5_dqd6m")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackComponent"]
+shape = SubResource("CircleShape2D_xb4s2")

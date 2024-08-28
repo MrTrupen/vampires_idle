@@ -8,3 +8,6 @@ extends Resource
 @export var damage: int = 1
 ## Attack cooldown in seconds
 @export var attack_cooldown: float = 1
+
+var hitbox_component: HitboxComponent = null
+var attack_component: AttackComponent = null
