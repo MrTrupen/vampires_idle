@@ -13,6 +13,7 @@ func _ready():
 ## @param damage: The amount of damage the hero takes
 func get_hit(damage: int):
 	health -= damage
+	MainManager.add_blood(damage)
 	print("Hero hit by monster", health)
 
 

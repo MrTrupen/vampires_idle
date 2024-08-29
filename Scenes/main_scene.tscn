@@ -14,6 +14,17 @@
 position = Vector2(2, 0)
 texture = ExtResource("1_cgas4")
 
+[node name="Blood_counter" type="Label" parent="Background"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = -160.0
+offset_top = -90.0
+offset_right = -80.0
+offset_bottom = -67.0
+grow_horizontal = 2
+size_flags_horizontal = 0
+text = "Blood: xxx"
+
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(3.65, 3.65)
 

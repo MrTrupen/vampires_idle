@@ -11,3 +11,4 @@ health = 5000
 damage = 200
 attack_cooldown = 5.0
 respawn_cooldown = 25.0
+monsters_spawn_limit = 1
