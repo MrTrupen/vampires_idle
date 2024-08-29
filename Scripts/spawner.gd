@@ -18,9 +18,7 @@ func _ready():
 func _physics_process(_delta):
 	if spawn_timer <= 0:
 		spawn_timer = monster_data.respawn_cooldown * 60
-		var monster: Area2D = monster_template.instantiate()
+		var monster: Area2D = Monster.new_enemy(monster_data, monster_template)
 		add_child(monster)
-		# monster.get_script().load_data(monster_data)
-		print("Monster spawned")
 	else:
 		spawn_timer -= 1
