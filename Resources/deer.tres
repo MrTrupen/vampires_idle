@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="DataMonster" load_steps=3 format=3 uid="uid://cjsomurxvfcpw"]
+
+[ext_resource type="Script" path="res://Resources/data_monster.gd" id="1_8qq5b"]
+[ext_resource type="Texture2D" uid="uid://b6xyq4jwy4b2y" path="res://Art/deer.png" id="2_4psny"]
+
+[resource]
+script = ExtResource("1_8qq5b")
+sprite = ExtResource("2_4psny")
+movement_speed = 25
+health = 250
+damage = 125
+attack_cooldown = 2.0
+respawn_cooldown = 5.0

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="DataMonster" load_steps=3 format=3 uid="uid://b8us4cg8sycim"]
+
+[ext_resource type="Script" path="res://Resources/data_monster.gd" id="1_u7ai2"]
+[ext_resource type="Texture2D" uid="uid://b32vmmfrvs2ps" path="res://Art/flesh_golem.png" id="2_dir6p"]
+
+[resource]
+script = ExtResource("1_u7ai2")
+sprite = ExtResource("2_dir6p")
+movement_speed = 10
+health = 5000
+damage = 200
+attack_cooldown = 5.0
+respawn_cooldown = 25.0

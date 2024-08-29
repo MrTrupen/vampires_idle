@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="DataMonster" load_steps=3 format=3 uid="uid://ckss20i4suwdi"]
+
+[ext_resource type="Script" path="res://Resources/data_monster.gd" id="1_pfkyu"]
+[ext_resource type="Texture2D" uid="uid://docp1fabbrhud" path="res://Art/scythe_rider.png" id="2_1ynmm"]
+
+[resource]
+script = ExtResource("1_pfkyu")
+sprite = ExtResource("2_1ynmm")
+movement_speed = 75
+health = 100
+damage = 25
+attack_cooldown = 0.25
+respawn_cooldown = 10.0
