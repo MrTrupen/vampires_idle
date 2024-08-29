@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://b87l5p0j3hb8i"]
+[gd_scene load_steps=8 format=3 uid="uid://b87l5p0j3hb8i"]
 
 [ext_resource type="Texture2D" uid="uid://d0qxjr8488fg2" path="res://Art/background.png" id="1_cgas4"]
 [ext_resource type="PackedScene" uid="uid://c4wki1k4wifjp" path="res://Scenes/monster.tscn" id="2_y8684"]
 [ext_resource type="Resource" uid="uid://j5u02eb8rfjv" path="res://Resources/bug.tres" id="3_jf1yb"]
 [ext_resource type="PackedScene" uid="uid://cuwn4otagtavs" path="res://Scenes/hero.tscn" id="3_xmc1g"]
+[ext_resource type="Resource" uid="uid://cjsomurxvfcpw" path="res://Resources/deer.tres" id="4_oe0yq"]
 [ext_resource type="PackedScene" uid="uid://dfcbp5mounuwp" path="res://Scenes/spawner.tscn" id="5_fdk3j"]
+[ext_resource type="Resource" uid="uid://b8us4cg8sycim" path="res://Resources/flesh_golem.tres" id="7_0j2qv"]
 
 [node name="MainScene" type="Node2D"]
 
@@ -19,7 +21,17 @@ zoom = Vector2(3.65, 3.65)
 unique_name_in_owner = true
 monitoring = false
 
-[node name="Spawner" parent="." instance=ExtResource("5_fdk3j")]
+[node name="Spawner_deer" parent="." instance=ExtResource("5_fdk3j")]
 position = Vector2(-125, -37)
+monster_data = ExtResource("4_oe0yq")
+monster_template = ExtResource("2_y8684")
+
+[node name="Spawner_bug" parent="." instance=ExtResource("5_fdk3j")]
+position = Vector2(210, 64)
 monster_data = ExtResource("3_jf1yb")
+monster_template = ExtResource("2_y8684")
+
+[node name="Spawner_golem" parent="." instance=ExtResource("5_fdk3j")]
+position = Vector2(-214, 85)
+monster_data = ExtResource("7_0j2qv")
 monster_template = ExtResource("2_y8684")

@@ -10,4 +10,4 @@ movement_speed = 25
 health = 250
 damage = 125
 attack_cooldown = 2.0
-respawn_cooldown = 5.0
+respawn_cooldown = 1.0
