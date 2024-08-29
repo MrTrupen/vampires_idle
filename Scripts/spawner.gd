@@ -16,7 +16,7 @@ func _ready():
 
 
 func _physics_process(_delta):
-	if spawn_timer <= 0:
+	if spawn_timer <= 0 and get_child_count() < monster_data.monsters_spawn_limit:
 		spawn_timer = monster_data.respawn_cooldown * 60
 		var monster: Area2D = Monster.new_enemy(monster_data, monster_template)
 		add_child(monster)

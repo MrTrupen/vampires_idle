@@ -10,3 +10,5 @@ extends Resource
 @export var attack_cooldown: float = 1
 ## Spawner cooldown in seconds
 @export var respawn_cooldown: float = 1
+## Monsters limit from one spawner
+@export var monsters_spawn_limit: int = 1

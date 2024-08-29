@@ -22,16 +22,16 @@ unique_name_in_owner = true
 monitoring = false
 
 [node name="Spawner_deer" parent="." instance=ExtResource("5_fdk3j")]
-position = Vector2(-125, -37)
+position = Vector2(-181, -91)
 monster_data = ExtResource("4_oe0yq")
 monster_template = ExtResource("2_y8684")
 
 [node name="Spawner_bug" parent="." instance=ExtResource("5_fdk3j")]
-position = Vector2(210, 64)
+position = Vector2(209, 2)
 monster_data = ExtResource("3_jf1yb")
 monster_template = ExtResource("2_y8684")
 
 [node name="Spawner_golem" parent="." instance=ExtResource("5_fdk3j")]
-position = Vector2(-214, 85)
+position = Vector2(-184, 89)
 monster_data = ExtResource("7_0j2qv")
 monster_template = ExtResource("2_y8684")
