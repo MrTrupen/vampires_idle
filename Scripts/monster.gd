@@ -24,9 +24,17 @@ func _ready():
 
 func _process(delta):
 	if is_moving:
-		global_position = global_position.move_toward(
-			Vector2(hero.global_position), delta * data.movement_speed
+		var move_direction = (hero.global_position - global_position).normalized()
+
+		# Add a small random offset to the movement direction for a "wander" effect
+		var jitter_strength = 10  # Adjust this to control the amount of randomness
+		var random_offset = Vector2(
+			randf_range(-jitter_strength, jitter_strength),
+			randf_range(-jitter_strength, jitter_strength)
 		)
+
+		move_direction += random_offset.normalized() * 0.1
+		global_position += move_direction * delta * data.movement_speed
 
 
 func _physics_process(_delta):
