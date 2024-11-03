@@ -14,17 +14,6 @@
 position = Vector2(2, 0)
 texture = ExtResource("1_cgas4")
 
-[node name="Blood_counter" type="Label" parent="Background"]
-anchors_preset = 10
-anchor_right = 1.0
-offset_left = -160.0
-offset_top = -90.0
-offset_right = -80.0
-offset_bottom = -67.0
-grow_horizontal = 2
-size_flags_horizontal = 0
-text = "Blood: xxx"
-
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(3.65, 3.65)
 
@@ -46,3 +35,29 @@ monster_template = ExtResource("2_y8684")
 position = Vector2(-184, 89)
 monster_data = ExtResource("7_0j2qv")
 monster_template = ExtResource("2_y8684")
+
+[node name="GUI" type="Node2D" parent="."]
+
+[node name="Blood_counter" type="Label" parent="GUI"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = -158.0
+offset_top = -90.0
+offset_right = -78.0
+offset_bottom = -67.0
+grow_horizontal = 2
+size_flags_horizontal = 0
+text = "Blood: xxx"
+
+[node name="Experience_counter" type="Label" parent="GUI"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 19.0
+offset_top = -87.0
+offset_right = 157.0
+offset_bottom = -64.0
+grow_horizontal = 0
+size_flags_horizontal = 0
+text = "Experience: xxxxx"
+horizontal_alignment = 2

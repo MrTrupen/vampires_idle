@@ -5,8 +5,8 @@ var blood: int = 0
 var experience: int = 0
 
 @onready var hero: Area2D = get_node("/root/MainScene/Hero")
-@onready var blood_counter: Label = get_node("/root/MainScene/Background/Blood_counter")
-@onready var experience_counter: Label = get_node("/root/MainScene/Background/Experience_counter")
+@onready var blood_counter: Label = get_node("/root/MainScene/GUI/Blood_counter")
+@onready var experience_counter: Label = get_node("/root/MainScene/GUI/Experience_counter")
 
 
 func _ready():
