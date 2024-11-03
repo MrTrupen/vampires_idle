@@ -1,0 +1,50 @@
+[gd_scene load_steps=6 format=3 uid="uid://b6fdxcsy25pob"]
+
+[ext_resource type="Texture2D" uid="uid://l3xssxcy856c" path="res://Art/kenney_particle-pack/slash_03.png" id="1_bml2l"]
+[ext_resource type="Script" path="res://Scripts/death_particles.gd" id="2_v334a"]
+
+[sub_resource type="Curve" id="Curve_r1rvg"]
+min_value = -360.0
+max_value = 360.0
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_6xv1q"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_udq67"]
+colors = PackedColorArray(1, 0, 0, 1, 0.27733, 0, 0, 1)
+
+[node name="DeathParticles" type="CPUParticles2D"]
+scale = Vector2(0.01, 0.01)
+amount = 10
+lifetime = 0.5
+one_shot = true
+explosiveness = 0.34
+randomness = 1.0
+lifetime_randomness = 0.25
+texture = ExtResource("1_bml2l")
+emission_shape = 1
+emission_sphere_radius = 1.0
+direction = Vector2(0, 0)
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 70.37
+initial_velocity_max = 696.29
+angle_min = -144.0
+angle_max = 84.0
+angle_curve = SubResource("Curve_r1rvg")
+scale_amount_min = 0.01
+scale_amount_max = 0.1
+scale_amount_curve = SubResource("Curve_6xv1q")
+color_ramp = SubResource("Gradient_udq67")
+hue_variation_max = 0.31
+script = ExtResource("2_v334a")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

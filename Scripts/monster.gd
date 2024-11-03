@@ -1,7 +1,8 @@
 class_name Monster
 extends Area2D
 
-# @export var data: DataMonster = preload("res://Resources/bug.tres")
+const DEATH_PARTICLES = preload("res://Scenes/death_particles.tscn")
+
 @export var data: DataMonster = null
 
 var is_moving: bool = true
@@ -59,6 +60,8 @@ func get_hit(damage: int) -> bool:
 	data.health -= damage
 	if data.health <= 0:
 		MainManager.add_experience(10)
+		var particle = DEATH_PARTICLES.instantiate()
+		add_child(particle)
 		return true
 	return false
 

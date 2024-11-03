@@ -43,7 +43,6 @@ func hit_all_enemies():
 	for enemy in enemies_in_range:
 		if enemy.get_hit(attack_damage):
 			enemies_in_range.erase(enemy)
-			enemy.queue_free()
 			print("Enemy killed")
 		else:
 			print("Enemy survived")
