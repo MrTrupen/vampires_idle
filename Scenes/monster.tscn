@@ -12,6 +12,7 @@ script = ExtResource("1_wdfmk")
 [node name="Sprite" type="Sprite2D" parent="."]
 
 [node name="Hitbox" type="CollisionShape2D" parent="."]
+visible = false
 shape = SubResource("CircleShape2D_mno11")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
