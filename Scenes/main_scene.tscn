@@ -22,30 +22,29 @@ unique_name_in_owner = true
 monitoring = false
 
 [node name="Spawner_deer" parent="." instance=ExtResource("5_fdk3j")]
-position = Vector2(-181, -91)
+position = Vector2(-203, -76)
 monster_data = ExtResource("4_oe0yq")
 monster_template = ExtResource("2_y8684")
 
 [node name="Spawner_bug" parent="." instance=ExtResource("5_fdk3j")]
-position = Vector2(209, 2)
+position = Vector2(187, 9)
 monster_data = ExtResource("3_jf1yb")
 monster_template = ExtResource("2_y8684")
 
 [node name="Spawner_golem" parent="." instance=ExtResource("5_fdk3j")]
-position = Vector2(-184, 89)
+position = Vector2(-94, 108)
 monster_data = ExtResource("7_0j2qv")
 monster_template = ExtResource("2_y8684")
 
 [node name="GUI" type="Node2D" parent="."]
 
 [node name="Blood_counter" type="Label" parent="GUI"]
-anchors_preset = 10
-anchor_right = 1.0
-offset_left = -158.0
-offset_top = -90.0
-offset_right = -78.0
-offset_bottom = -67.0
-grow_horizontal = 2
+anchors_preset = -1
+offset_left = -157.0
+offset_top = -88.0
+offset_right = -77.0
+offset_bottom = -65.0
+grow_vertical = 2
 size_flags_horizontal = 0
 text = "Blood: xxx"
 

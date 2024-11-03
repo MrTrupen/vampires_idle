@@ -14,7 +14,7 @@ var attack_timer: float = 0
 
 func _ready():
 	if data:
-		print("ready")
+		print("Enemy spawned with")
 		data = data.duplicate()
 		get_node("Sprite").texture = data.sprite
 	else:
@@ -33,7 +33,7 @@ func _physics_process(_delta):
 	if is_attacking and attack_timer <= 0:
 		attack_timer = data.attack_cooldown * 60
 		hero.get_hit(data.damage)
-		print("Monster hit hero", data.damage)
+		# print("Monster hit hero", data.damage)
 	else:
 		attack_timer -= 1
 
@@ -43,7 +43,16 @@ func _on_area_entered(_area: Area2D):
 	is_attacking = true
 	is_moving = false
 	hero.get_hit(data.damage)
-	print("Monster hit hero", data.damage)
+	hero.add_enemy(self)
+	# print("Monster hit hero", data.damage)
+
+
+func get_hit(damage: int) -> bool:
+	data.health -= damage
+	if data.health <= 0:
+		MainManager.add_experience(10)
+		return true
+	return false
 
 
 # Creates a new enemy instance based on provided data and template.
