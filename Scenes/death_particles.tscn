@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://b6fdxcsy25pob"]
+[gd_scene load_steps=7 format=3 uid="uid://b6fdxcsy25pob"]
 
 [ext_resource type="Texture2D" uid="uid://l3xssxcy856c" path="res://Art/kenney_particle-pack/slash_03.png" id="1_bml2l"]
 [ext_resource type="Script" path="res://Scripts/death_particles.gd" id="2_v334a"]
+[ext_resource type="AudioStream" uid="uid://bbyfvqsvrt3l7" path="res://Sounds/knifeSlice.ogg" id="3_nsadd"]
 
 [sub_resource type="Curve" id="Curve_r1rvg"]
 min_value = -360.0
@@ -18,6 +19,7 @@ colors = PackedColorArray(1, 0, 0, 1, 0.27733, 0, 0, 1)
 
 [node name="DeathParticles" type="CPUParticles2D"]
 scale = Vector2(0.01, 0.01)
+emitting = true
 amount = 10
 lifetime = 0.5
 one_shot = true
@@ -46,5 +48,10 @@ script = ExtResource("2_v334a")
 wait_time = 0.5
 one_shot = true
 autostart = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_nsadd")
+volume_db = -15.0
+autoplay = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
