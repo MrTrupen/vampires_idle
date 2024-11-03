@@ -15,7 +15,7 @@ var attack_timer: float = 0
 
 func _ready():
 	if data:
-		print("Enemy spawned with")
+		# print("Enemy spawned")
 		data = data.duplicate()
 		get_node("Sprite").texture = data.sprite
 	else:
