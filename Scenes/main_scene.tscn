@@ -19,7 +19,6 @@ zoom = Vector2(3.65, 3.65)
 
 [node name="Hero" parent="." instance=ExtResource("3_xmc1g")]
 unique_name_in_owner = true
-monitoring = false
 
 [node name="Spawner_deer" parent="." instance=ExtResource("5_fdk3j")]
 position = Vector2(-216, -110)

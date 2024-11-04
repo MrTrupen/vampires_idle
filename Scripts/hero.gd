@@ -34,11 +34,6 @@ func _physics_process(_delta):
 		attack_timer -= 1
 
 
-func add_enemy(enemy: Area2D):
-	enemies_in_range.append(enemy)
-	# print("Enemy added to range")
-
-
 func hit_all_enemies():
 	for enemy in enemies_in_range:
 		if enemy.get_hit(attack_damage):
@@ -49,5 +44,6 @@ func hit_all_enemies():
 			# print("Enemy survived")
 
 
-func _on_area_entered(_area: Area2D):
-	print("monser entered area")
+func _on_area_entered(area: Area2D):
+	enemies_in_range.append(area)
+	# print("monser entered area")

@@ -52,7 +52,6 @@ func _on_area_entered(_area: Area2D):
 	is_attacking = true
 	is_moving = false
 	hero.get_hit(data.damage)
-	hero.add_enemy(self)
 	# print("Monster hit hero", data.damage)
 
 

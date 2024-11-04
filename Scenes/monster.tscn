@@ -6,7 +6,7 @@
 radius = 9.0
 
 [node name="Monster" type="Area2D"]
-collision_layer = 2
+collision_mask = 2
 script = ExtResource("1_wdfmk")
 
 [node name="Sprite" type="Sprite2D" parent="."]
