@@ -9,6 +9,7 @@ name = "Deer"
 sprite = ExtResource("2_4psny")
 movement_speed = 25
 health = 250
+experience = 10
 damage = 125
 attack_cooldown = 2.0
 respawn_cooldown = 1.0

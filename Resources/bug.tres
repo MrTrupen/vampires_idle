@@ -9,6 +9,7 @@ name = "Bug"
 sprite = ExtResource("1_0u472")
 movement_speed = 50
 health = 100
+experience = 1
 damage = 65
 attack_cooldown = 1.0
 respawn_cooldown = 1.0

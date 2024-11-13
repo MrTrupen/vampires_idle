@@ -20,7 +20,7 @@ func _ready():
 func _physics_process(_delta):
 	if (
 		spawn_timer <= 0
-		and MainManager.alive_enemies[monster_data.name] <= monster_data.monsters_spawn_limit
+		and MainManager.alive_enemies[monster_data.name] < monster_data.monsters_spawn_limit
 	):
 		spawn_timer = monster_data.respawn_cooldown * 60
 		var monster: Area2D = Monster.new_enemy(monster_data, monster_template)
