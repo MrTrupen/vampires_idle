@@ -5,6 +5,7 @@
 
 [resource]
 script = ExtResource("1_tskp0")
+name = "Bug"
 sprite = ExtResource("1_0u472")
 movement_speed = 50
 health = 100

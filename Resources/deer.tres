@@ -5,6 +5,7 @@
 
 [resource]
 script = ExtResource("1_8qq5b")
+name = "Deer"
 sprite = ExtResource("2_4psny")
 movement_speed = 25
 health = 250

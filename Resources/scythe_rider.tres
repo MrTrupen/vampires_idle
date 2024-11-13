@@ -5,6 +5,7 @@
 
 [resource]
 script = ExtResource("1_pfkyu")
+name = "Scyther rider"
 sprite = ExtResource("2_1ynmm")
 movement_speed = 75
 health = 100

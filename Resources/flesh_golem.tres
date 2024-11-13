@@ -5,6 +5,7 @@
 
 [resource]
 script = ExtResource("1_u7ai2")
+name = "Flesh golem"
 sprite = ExtResource("2_dir6p")
 movement_speed = 10
 health = 5000
