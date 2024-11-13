@@ -20,17 +20,21 @@ zoom = Vector2(3.65, 3.65)
 [node name="Hero" parent="." instance=ExtResource("3_xmc1g")]
 unique_name_in_owner = true
 
-[node name="Spawner_deer" parent="." instance=ExtResource("5_fdk3j")]
-position = Vector2(-216, -110)
+[node name="Enemies" type="Node" parent="."]
+
+[node name="Spawners" type="Node" parent="."]
+
+[node name="Spawner_deer" parent="Spawners" instance=ExtResource("5_fdk3j")]
+position = Vector2(-197, -92)
 monster_data = ExtResource("4_oe0yq")
 monster_template = ExtResource("2_y8684")
 
-[node name="Spawner_bug" parent="." instance=ExtResource("5_fdk3j")]
+[node name="Spawner_bug" parent="Spawners" instance=ExtResource("5_fdk3j")]
 position = Vector2(208, 16)
 monster_data = ExtResource("3_jf1yb")
 monster_template = ExtResource("2_y8684")
 
-[node name="Spawner_golem" parent="." instance=ExtResource("5_fdk3j")]
+[node name="Spawner_golem" parent="Spawners" instance=ExtResource("5_fdk3j")]
 position = Vector2(-83, 128)
 monster_data = ExtResource("7_0j2qv")
 monster_template = ExtResource("2_y8684")

@@ -9,17 +9,30 @@ var attack_damage: int = 25
 var attack_timer: float = 0
 var enemies_in_range: Array = []
 
+@onready var health_bar: ProgressBar = $HealthBar
+
 
 func _ready():
 	health = max_health
+	health_bar.max_value = max_health
+	health_bar.value = max_health
+
+
+func respawn_hero():
+	health = max_health
+	health_bar.value = max_health
+	enemies_in_range = []
 
 
 ## Called when the hero is hit by a monster [br]
 ## @param damage: The amount of damage the hero takes
 func get_hit(damage: int):
 	health -= damage
+	health_bar.value = health
 	MainManager.add_blood(damage)
-	# print("Hero hit by monster", health)
+	if health <= 0:
+		MainManager.hero_died()
+		respawn_hero()
 
 
 func _physics_process(_delta):
