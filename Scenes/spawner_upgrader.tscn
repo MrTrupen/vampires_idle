@@ -1,0 +1,111 @@
+[gd_scene load_steps=2 format=3 uid="uid://q33spxk0s5jw"]
+
+[ext_resource type="Script" path="res://Scripts/spawner_upgrader.gd" id="1_dp7ub"]
+
+[node name="MainContainer" type="Control"]
+layout_mode = 3
+anchor_right = 0.169
+anchor_bottom = 0.276
+offset_right = 85.312
+offset_bottom = -0.848022
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_dp7ub")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.133333, 0.133333, 0.133333, 1)
+
+[node name="SpawnerName" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -65.0
+offset_right = 65.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "SPAWNER_NAME"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.199
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -0.621002
+offset_right = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 3
+
+[node name="Health" type="Label" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 7
+text = "Health"
+horizontal_alignment = 1
+
+[node name="HealthStat" type="Label" parent="GridContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 7
+text = "9999"
+horizontal_alignment = 1
+
+[node name="BuyHealth" type="Button" parent="GridContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 7
+text = "BUY {PRICE}"
+
+[node name="RespawnCooldown" type="Label" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 7
+text = "Respawn"
+horizontal_alignment = 1
+
+[node name="RespawnCooldownStat" type="Label" parent="GridContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 7
+text = "9999"
+horizontal_alignment = 1
+
+[node name="BuyRespawnCooldown" type="Button" parent="GridContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 7
+text = "BUY {PRICE}"
+
+[node name="SpawnLimit" type="Label" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 7
+text = "Spawn limit"
+horizontal_alignment = 1
+
+[node name="SpawnLimitStat" type="Label" parent="GridContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 7
+text = "9999"
+horizontal_alignment = 1
+
+[node name="BuySpawnLimit" type="Button" parent="GridContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 7
+text = "BUY {PRICE}"
+
+[connection signal="pressed" from="GridContainer/BuyHealth" to="." method="_on_buy_health_pressed"]
+[connection signal="pressed" from="GridContainer/BuyRespawnCooldown" to="." method="_on_buy_respawn_cooldown_pressed"]
+[connection signal="pressed" from="GridContainer/BuySpawnLimit" to="." method="_on_buy_spawn_limit_pressed"]

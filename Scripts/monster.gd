@@ -58,7 +58,7 @@ func _on_area_entered(_area: Area2D):
 func get_hit(damage: int) -> bool:
 	monster_data.health -= damage
 	if monster_data.health <= 0:
-		MainManager.add_experience(monster_data.experience)
+		MainManager.add_experience(monster_data.get_experience())
 		MainManager.alive_enemies[monster_data.name] -= 1
 		var particle = DEATH_PARTICLES.instantiate()
 		add_child(particle)

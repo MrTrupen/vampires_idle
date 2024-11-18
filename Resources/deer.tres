@@ -13,4 +13,4 @@ experience = 10
 damage = 125
 attack_cooldown = 2.0
 respawn_cooldown = 1.0
-monsters_spawn_limit = 5
+spawn_limit = 2

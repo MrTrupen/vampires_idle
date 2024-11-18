@@ -10,9 +10,7 @@ var random_manager = RandomNumberGenerator.new()
 
 
 func _ready():
-	if monster_data:
-		monster_data = monster_data.duplicate()
-	else:
+	if !monster_data:
 		print("Monster data not set")
 		queue_free()
 
@@ -20,9 +18,9 @@ func _ready():
 func _physics_process(_delta):
 	if (
 		spawn_timer <= 0
-		and MainManager.alive_enemies[monster_data.name] < monster_data.monsters_spawn_limit
+		and MainManager.alive_enemies[monster_data.name] < monster_data.get_spawn_limit()
 	):
-		spawn_timer = monster_data.respawn_cooldown * 60
+		spawn_timer = monster_data.get_respawn_cooldown() * 60
 		var monster: Area2D = Monster.new_enemy(monster_data, monster_template)
 		enemies.add_child(monster)
 		MainManager.alive_enemies[monster_data.name] += 1
